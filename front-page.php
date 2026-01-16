@@ -219,7 +219,6 @@ get_header(); ?>
                 <p class="team-role">CEO & Founder</p>
             </div>
             <div class="team-card">
-
                 <img class="team-image" src="https://res.cloudinary.com/swdb/image/upload/v1768575624/A_digital_photograph_features_a_close-up_portrait__354x472_natural_s2wd4j.png" alt="">
 
                 <h4 class="team-name">Michael Chen</h4>

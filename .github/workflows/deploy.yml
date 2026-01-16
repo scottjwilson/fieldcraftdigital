@@ -33,4 +33,4 @@ jobs:
           private-ssh-key: ${{ secrets.SSH_KEY }}
           destination-path: /home/scottjwilsoncom/public_html/fcd/wp-content/themes/fieldcraftdigital
           ssh-port: 6543
-          rsync-options: --exclude=node_modules --exclude=.git --exclude=.github
+          rsync-options: --exclude=node_modules --exclude=.git --exclude=.github --exclude=src

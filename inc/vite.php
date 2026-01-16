@@ -15,7 +15,7 @@ function the_theme_detect_vite_server(): array
 {
     $vite_server = "http://localhost:3000";
 
-    $response = @wp_remote_get($vite_server . "/js/main.js", [
+    $response = @wp_remote_get($vite_server . "/src/js/main.js", [
         "timeout" => 1,
         "sslverify" => false,
         "redirection" => 0,
@@ -90,22 +90,20 @@ function the_theme_output_vite_scripts(): void
         return;
     }
 
-    $vite = the_theme_detect_vite_server();
-
-    if (!$vite["running"]) {
+    // Skip if production manifest exists
+    if (file_exists(get_theme_file_path("dist/.vite/manifest.json"))) {
         return;
     }
 
-    $vite_base = $vite["base"];
-    $vite_client_url = $vite["server"] . $vite_base . "@vite/client";
-    $vite_main_url = $vite["server"] . $vite_base . "js/main.js";
+    // On local dev, always output Vite scripts (browser will handle if server is down)
+    $vite_server = "http://localhost:3000";
 
     echo '<script type="module" src="' .
-        esc_url($vite_client_url) .
+        esc_url($vite_server . "/@vite/client") .
         '"></script>' .
         "\n";
     echo '<script type="module" src="' .
-        esc_url($vite_main_url) .
+        esc_url($vite_server . "/src/js/main.js") .
         '"></script>' .
         "\n";
 }

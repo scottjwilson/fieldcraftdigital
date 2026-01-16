@@ -16,7 +16,7 @@ export default defineConfig(({ command }) => {
       rollupOptions: {
         input: {
           // Main entry point - CSS is imported here for HMR
-          main: resolve(__dirname, "js/main.js"),
+          main: resolve(__dirname, "src/js/main.js"),
         },
         output: {
           entryFileNames: "js/[name].js",
@@ -43,7 +43,7 @@ export default defineConfig(({ command }) => {
       },
       watch: {
         // Watch CSS files for changes
-        include: ["css/**/*.css", "js/**/*.js"],
+        include: ["src/css/**/*.css", "src/js/**/*.js"],
       },
     },
 
