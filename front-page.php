@@ -5,23 +5,109 @@
  * @package Fieldcraft
  */
 
-get_header();
-?>
+get_header(); ?>
 
 <!-- Hero Section -->
 <section class="hero">
     <div class="container">
-        <div class="hero-content reveal">
-            <h1 class="text-hero">A Single Solution<br>For Optimizing Your<br>Business</h1>
-            <p class="hero-subtitle">
-                Streamline your operations with our comprehensive platform. Manage projects, collaborate with your team, and scale your business effortlessly.
-            </p>
-            <div class="hero-actions">
-                <a href="#features" class="btn btn-primary btn-lg">
-                    Get Started
-                    <?php echo fieldcraft_icon('arrow-right'); ?>
-                </a>
-                <a href="#demo" class="btn btn-outline btn-lg">Watch Demo</a>
+        <div class="hero-inner">
+            <div class="hero-content reveal">
+                <h1 class="text-hero">A Single<br>Solution<br>For Optimizing<br>Your Business</h1>
+                <p class="hero-subtitle">
+                    The all-in-one solution for simplifying your workflow and driving results. Say goodbye to manual processes and inefficiencies.
+                </p>
+                <form class="hero-form" action="<?php echo esc_url(
+                    home_url("/contact"),
+                ); ?>" method="get">
+                    <input type="email" name="email" placeholder="Enter email address">
+                    <button type="submit" class="btn btn-accent">
+                        Get Started
+                        <?php echo fieldcraft_icon("arrow-right"); ?>
+                    </button>
+                </form>
+            </div>
+
+            <div class="hero-visual">
+                <!-- Returning Customers Card -->
+                <div class="dashboard-card dashboard-card-purple card-customers">
+                    <div class="donut"><span>51%</span></div>
+                    <h4>Returning Customers</h4>
+                    <div class="dropdown">1 month ▾</div>
+                </div>
+
+                <!-- Team Meeting Card -->
+                <div class="dashboard-card card-meeting">
+                    <h4>Team Meeting</h4>
+                    <div class="date">Today, December 08th<br>09:00 - 09:30 am</div>
+                    <div class="meta">
+                        <div class="avatars">
+                            <div class="avatar" style="background: #a78bfa;"></div>
+                            <div class="avatar" style="background: #facc15;"></div>
+                            <div class="avatar" style="background: #f97316;"></div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">👁 03</span>
+                            <span class="tag">▲ Low</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Now Card -->
+                <div class="dashboard-card card-active">
+                    <h4>Right Now</h4>
+                    <div class="number">289 <span>/ Active Users</span></div>
+                    <div class="bar">
+                        <div class="bar-green"></div>
+                        <div class="bar-purple"></div>
+                    </div>
+                    <div class="legend">
+                        <span class="new">43% New Visitor</span>
+                        <span class="returning">57% Returning</span>
+                    </div>
+                </div>
+
+                <!-- Revenue Card -->
+                <div class="dashboard-card card-revenue">
+                    <h4>Yearly Revenue</h4>
+                    <div class="amount">$112,340 <span>/ Total Revenue</span></div>
+                    <div class="chart">
+                        <div class="bar bar-purple" style="height: 30%;"></div>
+                        <div class="bar bar-purple" style="height: 45%;"></div>
+                        <div class="bar bar-purple" style="height: 35%;"></div>
+                        <div class="bar bar-purple" style="height: 55%;"></div>
+                        <div class="bar bar-yellow" style="height: 75%;"></div>
+                        <div class="bar bar-yellow" style="height: 90%;"></div>
+                        <div class="bar bar-yellow" style="height: 100%;"></div>
+                        <div class="bar bar-purple" style="height: 60%;"></div>
+                    </div>
+                    <div class="months">
+                        <span>Jan</span>
+                        <span>Feb</span>
+                        <span>Mar</span>
+                        <span>Apr</span>
+                        <span>May</span>
+                        <span>Jun</span>
+                        <span>Jul</span>
+                        <span>Aug</span>
+                    </div>
+                </div>
+
+                <!-- New Customers Card -->
+                <div class="dashboard-card dashboard-card-yellow card-new-customers">
+                    <div class="donut"><span>48%</span></div>
+                    <h4>New Customers</h4>
+                </div>
+
+                <!-- Boost Growth Card -->
+                <div class="dashboard-card dashboard-card-purple card-boost">
+                    <div class="inner">
+                        <div class="icon">57%</div>
+                        <div>
+                            <h4>Boost Growth</h4>
+                            <p>Sale process</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -51,7 +137,7 @@ get_header();
             <!-- Row 1 -->
             <div class="card value-card card-purple reveal">
                 <div class="icon-box icon-box-white">
-                    <?php echo fieldcraft_icon('star'); ?>
+                    <?php echo fieldcraft_icon("star"); ?>
                 </div>
                 <h4 class="card-title">Integrity</h4>
                 <p class="card-text" style="color: rgba(255,255,255,0.7);">Our intuitive dashboard provides a bird's eye view of your tasks, projects, and team performance.</p>
@@ -59,7 +145,7 @@ get_header();
 
             <div class="card value-card reveal reveal-delay-1">
                 <div class="icon-box icon-box-purple">
-                    <?php echo fieldcraft_icon('lightning'); ?>
+                    <?php echo fieldcraft_icon("lightning"); ?>
                 </div>
                 <h4 class="card-title">Innovation</h4>
                 <p class="card-text">Stay organized and on top of your workload with our robust task management features.</p>
@@ -67,7 +153,7 @@ get_header();
 
             <div class="card value-card reveal reveal-delay-2">
                 <div class="icon-box icon-box-purple">
-                    <?php echo fieldcraft_icon('users'); ?>
+                    <?php echo fieldcraft_icon("users"); ?>
                 </div>
                 <h4 class="card-title">Collaboration</h4>
                 <p class="card-text">Foster collaboration and communication among your team members with our tools.</p>
@@ -76,7 +162,7 @@ get_header();
             <!-- Row 2 -->
             <div class="card value-card card-light-purple reveal">
                 <div class="icon-box icon-box-purple">
-                    <?php echo fieldcraft_icon('users'); ?>
+                    <?php echo fieldcraft_icon("users"); ?>
                 </div>
                 <h4 class="card-title">Team Player</h4>
                 <p class="card-text">Accurately track the time you and your team spend on tasks and projects with ease.</p>
@@ -84,7 +170,7 @@ get_header();
 
             <div class="card value-card reveal reveal-delay-1">
                 <div class="icon-box icon-box-purple">
-                    <?php echo fieldcraft_icon('settings'); ?>
+                    <?php echo fieldcraft_icon("settings"); ?>
                 </div>
                 <h4 class="card-title">Automation</h4>
                 <p class="card-text">Plan and manage your projects with ease using our comprehensive project planning tools.</p>
@@ -92,7 +178,7 @@ get_header();
 
             <div class="card value-card card-yellow reveal reveal-delay-2">
                 <div class="icon-box" style="background-color: var(--color-primary-700); color: white;">
-                    <?php echo fieldcraft_icon('chart'); ?>
+                    <?php echo fieldcraft_icon("chart"); ?>
                 </div>
                 <h4 class="card-title">Scaling Up</h4>
                 <p class="card-text" style="color: var(--color-primary-800);">Say goodbye to scattered documents and files with our centralized document management system.</p>
@@ -165,7 +251,7 @@ get_header();
         <div class="features-grid">
             <div class="feature-card reveal">
                 <div class="icon-box icon-box-white" style="margin-bottom: 1rem;">
-                    <?php echo fieldcraft_icon('code'); ?>
+                    <?php echo fieldcraft_icon("code"); ?>
                 </div>
                 <h4>Seamless integration tools amongst platforms</h4>
                 <p>Connect all your favorite tools and streamline your workflow.</p>
@@ -173,7 +259,7 @@ get_header();
 
             <div class="feature-card reveal reveal-delay-1">
                 <div class="icon-box icon-box-white" style="margin-bottom: 1rem;">
-                    <?php echo fieldcraft_icon('chart'); ?>
+                    <?php echo fieldcraft_icon("chart"); ?>
                 </div>
                 <h4>Startups backed up</h4>
                 <p>Our startup focused features will help you get the right fit for a great team.</p>
@@ -181,7 +267,7 @@ get_header();
 
             <div class="feature-card reveal reveal-delay-2">
                 <div class="icon-box icon-box-white" style="margin-bottom: 1rem;">
-                    <?php echo fieldcraft_icon('lightning'); ?>
+                    <?php echo fieldcraft_icon("lightning"); ?>
                 </div>
                 <h4>Increased efficiency</h4>
                 <p>Business productivity tools effortlessly help your business remain proactive.</p>
@@ -189,7 +275,7 @@ get_header();
 
             <div class="feature-card reveal">
                 <div class="icon-box icon-box-white" style="margin-bottom: 1rem;">
-                    <?php echo fieldcraft_icon('settings'); ?>
+                    <?php echo fieldcraft_icon("settings"); ?>
                 </div>
                 <h4>Boost Productivity</h4>
                 <p>Based on proven productivity hacks for smarter business intelligence.</p>
@@ -197,7 +283,7 @@ get_header();
 
             <div class="feature-card reveal reveal-delay-1">
                 <div class="icon-box icon-box-white" style="margin-bottom: 1rem;">
-                    <?php echo fieldcraft_icon('globe'); ?>
+                    <?php echo fieldcraft_icon("globe"); ?>
                 </div>
                 <h4>Analytics data set</h4>
                 <p>The best optimization tools with data-centric analytics with strategy.</p>
@@ -205,7 +291,7 @@ get_header();
 
             <div class="feature-card feature-card-highlight reveal reveal-delay-2">
                 <div class="icon-box" style="background-color: var(--color-primary-700); color: white; margin-bottom: 1rem;">
-                    <?php echo fieldcraft_icon('users'); ?>
+                    <?php echo fieldcraft_icon("users"); ?>
                 </div>
                 <h4>Team collaboration</h4>
                 <p>Work together seamlessly with real-time collaboration features.</p>
@@ -259,23 +345,26 @@ get_header();
                 </div>
                 <div class="pricing-features">
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>One individual account</span>
                     </div>
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>Weekly data analytics</span>
                     </div>
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>3 Startup idea support</span>
                     </div>
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>SEO, Wireframe implementation</span>
                     </div>
                 </div>
-                <a href="#" class="btn btn-outline">Buy Package <?php echo fieldcraft_icon('arrow-right', 16); ?></a>
+                <a href="#" class="btn btn-outline">Buy Package <?php echo fieldcraft_icon(
+                    "arrow-right",
+                    16,
+                ); ?></a>
             </div>
 
             <!-- Growth Pack -->
@@ -289,27 +378,30 @@ get_header();
                 </div>
                 <div class="pricing-features">
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>12 business account</span>
                     </div>
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>Weekly, daily data analytics</span>
                     </div>
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>3 Startup idea support with revision</span>
                     </div>
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>SEO, Wireframe implementation</span>
                     </div>
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>Data analytics report with cross platform collaboration</span>
                     </div>
                 </div>
-                <a href="#" class="btn btn-primary">Buy Package <?php echo fieldcraft_icon('arrow-right', 16); ?></a>
+                <a href="#" class="btn btn-primary">Buy Package <?php echo fieldcraft_icon(
+                    "arrow-right",
+                    16,
+                ); ?></a>
             </div>
 
             <!-- Business Pack -->
@@ -323,27 +415,30 @@ get_header();
                 </div>
                 <div class="pricing-features">
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>15 business account</span>
                     </div>
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>Weekly, daily data analytics</span>
                     </div>
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>5 Startup idea account with revision</span>
                     </div>
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>SEO, Wireframe implementation with AI adaptation</span>
                     </div>
                     <div class="pricing-feature">
-                        <?php echo fieldcraft_icon('check', 16); ?>
+                        <?php echo fieldcraft_icon("check", 16); ?>
                         <span>Social media management</span>
                     </div>
                 </div>
-                <a href="#" class="btn btn-outline">Buy Package <?php echo fieldcraft_icon('arrow-right', 16); ?></a>
+                <a href="#" class="btn btn-outline">Buy Package <?php echo fieldcraft_icon(
+                    "arrow-right",
+                    16,
+                ); ?></a>
             </div>
         </div>
     </div>
@@ -357,20 +452,38 @@ get_header();
                 <h2 class="text-display">Our Seamless<br>Integrations</h2>
                 <p>Rest easy knowing that your data is safe and secure with industry-leading security measures.</p>
                 <a href="#" class="btn btn-primary" style="margin-top: 1rem;">
-                    Explore Integration <?php echo fieldcraft_icon('arrow-right'); ?>
+                    Explore Integration <?php echo fieldcraft_icon(
+                        "arrow-right",
+                    ); ?>
                 </a>
             </div>
             <div class="integrations-grid reveal reveal-delay-1">
                 <?php
-                $colors = ['#8b5cf6', '#facc15', '#ef4444', '#22c55e', '#3b82f6', '#f97316', '#ec4899', '#06b6d4', '#eab308', '#a855f7'];
+                $colors = [
+                    "#8b5cf6",
+                    "#facc15",
+                    "#ef4444",
+                    "#22c55e",
+                    "#3b82f6",
+                    "#f97316",
+                    "#ec4899",
+                    "#06b6d4",
+                    "#eab308",
+                    "#a855f7",
+                ];
                 for ($i = 0; $i < 10; $i++): ?>
                 <div class="integration-item">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                        <rect width="40" height="40" rx="8" fill="<?php echo $colors[$i]; ?>" fill-opacity="0.1"/>
-                        <circle cx="20" cy="20" r="10" fill="<?php echo $colors[$i]; ?>"/>
+                        <rect width="40" height="40" rx="8" fill="<?php echo $colors[
+                            $i
+                        ]; ?>" fill-opacity="0.1"/>
+                        <circle cx="20" cy="20" r="10" fill="<?php echo $colors[
+                            $i
+                        ]; ?>"/>
                     </svg>
                 </div>
-                <?php endfor; ?>
+                <?php endfor;
+                ?>
             </div>
         </div>
     </div>
@@ -387,7 +500,10 @@ get_header();
             <div class="faq-item is-open reveal">
                 <button class="faq-question">
                     <span>What is Fieldcraft?</span>
-                    <span class="faq-icon"><?php echo fieldcraft_icon('plus', 14); ?></span>
+                    <span class="faq-icon"><?php echo fieldcraft_icon(
+                        "plus",
+                        14,
+                    ); ?></span>
                 </button>
                 <div class="faq-answer">
                     Our user-friendly dashboard provides a clear overview of your business operations, allowing you to monitor important metrics and track progress in real time. Streamline your project workflows with powerful task management features. Assign tasks, set deadlines.
@@ -397,7 +513,10 @@ get_header();
             <div class="faq-item reveal reveal-delay-1">
                 <button class="faq-question">
                     <span>How can Fieldcraft benefit my business?</span>
-                    <span class="faq-icon"><?php echo fieldcraft_icon('plus', 14); ?></span>
+                    <span class="faq-icon"><?php echo fieldcraft_icon(
+                        "plus",
+                        14,
+                    ); ?></span>
                 </button>
                 <div class="faq-answer">
                     Fieldcraft provides comprehensive tools to streamline your operations, improve team collaboration, and scale your business efficiently with data-driven insights.
@@ -407,7 +526,10 @@ get_header();
             <div class="faq-item reveal reveal-delay-2">
                 <button class="faq-question">
                     <span>Is Fieldcraft suitable for businesses of all sizes?</span>
-                    <span class="faq-icon"><?php echo fieldcraft_icon('plus', 14); ?></span>
+                    <span class="faq-icon"><?php echo fieldcraft_icon(
+                        "plus",
+                        14,
+                    ); ?></span>
                 </button>
                 <div class="faq-answer">
                     Yes! Whether you're a startup or an enterprise, our flexible pricing plans and scalable features adapt to your business needs.
@@ -417,7 +539,10 @@ get_header();
             <div class="faq-item reveal reveal-delay-3">
                 <button class="faq-question">
                     <span>Can I integrate Fieldcraft with other tools we use?</span>
-                    <span class="faq-icon"><?php echo fieldcraft_icon('plus', 14); ?></span>
+                    <span class="faq-icon"><?php echo fieldcraft_icon(
+                        "plus",
+                        14,
+                    ); ?></span>
                 </button>
                 <div class="faq-answer">
                     Absolutely! Fieldcraft offers seamless integrations with popular tools and platforms to ensure your workflow remains uninterrupted.
@@ -434,7 +559,7 @@ get_header();
             <h2 class="text-display">Ready to Transform<br>Your Business?</h2>
             <p>Join thousands of businesses already using Fieldcraft to optimize their operations and drive growth.</p>
             <a href="#" class="btn btn-accent btn-lg">
-                Get Started Free <?php echo fieldcraft_icon('arrow-right'); ?>
+                Get Started Free <?php echo fieldcraft_icon("arrow-right"); ?>
             </a>
         </div>
     </div>
