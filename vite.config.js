@@ -10,7 +10,7 @@ export default defineConfig(({ command }) => {
     base: isProduction ? "/wp-content/themes/fieldcraftdigital/" : "/",
 
     build: {
-      manifest: "manifest.json",
+      manifest: true,
       outDir: "dist",
       emptyOutDir: true,
       rollupOptions: {
