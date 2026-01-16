@@ -7,10 +7,10 @@ export default defineConfig(({ command }) => {
   return {
     // Only use base path in production builds
     // In dev mode, Vite serves from root for simpler URLs
-    base: isProduction ? "/wp-content/themes/dev-toolkit/" : "/",
+    base: isProduction ? "/wp-content/themes/fieldcraftdigital/" : "/",
 
     build: {
-      manifest: true,
+      manifest: "manifest.json",
       outDir: "dist",
       emptyOutDir: true,
       rollupOptions: {
