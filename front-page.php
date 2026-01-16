@@ -214,22 +214,26 @@ get_header(); ?>
 
         <div class="team-grid reveal">
             <div class="team-card">
-                <div class="team-image" style="background: linear-gradient(135deg, #fde047, #facc15);"></div>
+                <img class="team-image" src="https://res.cloudinary.com/swdb/image/upload/v1768575604/A_digital_headshot_features_a_young_Caucasian_blon_354x472_natural_fkripi.png" alt="">
                 <h4 class="team-name">Sarah Johnson</h4>
                 <p class="team-role">CEO & Founder</p>
             </div>
             <div class="team-card">
-                <div class="team-image" style="background: linear-gradient(135deg, #a78bfa, #7c3aed);"></div>
+
+                <img class="team-image" src="https://res.cloudinary.com/swdb/image/upload/v1768575624/A_digital_photograph_features_a_close-up_portrait__354x472_natural_s2wd4j.png" alt="">
+
                 <h4 class="team-name">Michael Chen</h4>
                 <p class="team-role">Lead Developer</p>
             </div>
             <div class="team-card">
-                <div class="team-image" style="background: linear-gradient(135deg, #fde047, #facc15);"></div>
-                <h4 class="team-name">Emily Davis</h4>
+                <img class="team-image" src="https://res.cloudinary.com/swdb/image/upload/v1768575602/A_digital_photograph_features_a_headshot_of_a_bear_354x472_natural_ukqkb6.png" alt="">
+
+                <h4 class="team-name">Eric Davis</h4>
                 <p class="team-role">Design Director</p>
             </div>
             <div class="team-card">
-                <div class="team-image" style="background: linear-gradient(135deg, #c4b5fd, #a78bfa);"></div>
+                <img class="team-image" src="https://res.cloudinary.com/swdb/image/upload/v1768578103/black_male_business_casual_354x472_o3s1ck.png" alt="">
+
                 <h4 class="team-name">James Wilson</h4>
                 <p class="team-role">Project Manager</p>
             </div>
@@ -372,7 +376,7 @@ get_header(); ?>
                 <span class="pricing-badge">Most economic</span>
                 <h3 class="pricing-name">Growth Pack</h3>
                 <p class="pricing-description">Best fit for individual any kind of startup</p>
-                <div class="pricing-price">
+                <div class="pricing-price-box">
                     <span class="pricing-amount">$24</span>
                     <span class="pricing-period">/mo</span>
                 </div>
@@ -398,7 +402,7 @@ get_header(); ?>
                         <span>Data analytics report with cross platform collaboration</span>
                     </div>
                 </div>
-                <a href="#" class="btn btn-primary">Buy Package <?php echo fieldcraft_icon(
+                <a href="#" class="btn btn-accent">Buy Package <?php echo fieldcraft_icon(
                     "arrow-right",
                     16,
                 ); ?></a>
