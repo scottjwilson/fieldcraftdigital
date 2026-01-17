@@ -169,3 +169,69 @@
 body.menu-open {
     overflow: hidden;
 }
+
+/* ========================================
+   HEADER - LIGHT VARIANT (for dark backgrounds)
+   ======================================== */
+
+/* Light header: transparent with white text */
+.site-header.header-light {
+    background-color: transparent;
+}
+
+.site-header.header-light .site-logo {
+    color: white;
+}
+
+.site-header.header-light .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.site-header.header-light .nav-link:hover,
+.site-header.header-light .nav-link.is-active {
+    color: white;
+}
+
+.site-header.header-light .btn-ghost {
+    color: white;
+}
+
+.site-header.header-light .btn-ghost:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.site-header.header-light .menu-toggle {
+    color: white;
+}
+
+/* When scrolled, revert to solid white background with dark text */
+.site-header.header-light.is-scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+}
+
+.site-header.header-light.is-scrolled .site-logo {
+    color: var(--color-neutral-900);
+}
+
+.site-header.header-light.is-scrolled .nav-link {
+    color: var(--color-neutral-600);
+}
+
+.site-header.header-light.is-scrolled .nav-link:hover,
+.site-header.header-light.is-scrolled .nav-link.is-active {
+    color: var(--color-neutral-900);
+}
+
+.site-header.header-light.is-scrolled .btn-ghost {
+    color: var(--color-neutral-700);
+}
+
+.site-header.header-light.is-scrolled .btn-ghost:hover {
+    background-color: var(--color-neutral-100);
+}
+
+.site-header.header-light.is-scrolled .menu-toggle {
+    color: var(--color-neutral-700);
+}

@@ -9,7 +9,15 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<header class="site-header">
+<?php
+// Determine if we need the light header variant (for dark hero backgrounds)
+$header_class = "site-header";
+$dark_hero_templates = ["about.php", "pricing.php"];
+if (is_page_template($dark_hero_templates)) {
+    $header_class .= " header-light";
+}
+?>
+<header class="<?php echo esc_attr($header_class); ?>">
     <div class="container">
         <div class="header-inner">
             <!-- Logo -->
@@ -32,7 +40,7 @@
                         home_url("/about"),
                     ); ?>" class="nav-link">About</a></li>
                     <li><a href="<?php echo esc_url(
-                        home_url("/services"),
+                        home_url("/features"),
                     ); ?>" class="nav-link">Features</a></li>
                     <li><a href="<?php echo esc_url(
                         home_url("/pricing"),
