@@ -130,11 +130,11 @@ function the_theme_load_vite_production_assets(): void
 
     $manifest = json_decode(file_get_contents($manifest_path), true);
 
-    if (!$manifest || !isset($manifest["js/main.js"])) {
+    if (!$manifest || !isset($manifest["src/js/main.js"])) {
         return;
     }
 
-    $entry = $manifest["js/main.js"];
+    $entry = $manifest["src/js/main.js"];
 
     // Enqueue CSS files
     if (isset($entry["css"]) && is_array($entry["css"])) {
