@@ -25,6 +25,9 @@ jobs:
       - name: 🔨 Build Assets
         run: npm run build
 
+      - name: 📋 List dist folder
+        run: ls -la dist/
+
       - name: 📂 Sync Files
         uses: SamKirkland/web-deploy@v1
         with:
@@ -33,4 +36,4 @@ jobs:
           private-ssh-key: ${{ secrets.SSH_KEY }}
           destination-path: /home/fieldcraftdigitalcom/public_html/wp-content/themes/fieldcraftdigital/
           ssh-port: 6543
-          rsync-options: --exclude=node_modules --exclude=.git --exclude=.github --exclude=src
+          rsync-options: --archive --verbose --compress --delete --exclude=node_modules --exclude=.git --exclude=.github --exclude=src
