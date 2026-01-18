@@ -9,6 +9,7 @@ get_header(); ?>
 
 <!-- Hero Section -->
 <section class="hero">
+
     <div class="container">
         <div class="hero-inner">
             <div class="hero-content reveal">
